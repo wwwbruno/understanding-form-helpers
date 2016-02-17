@@ -1,4 +1,12 @@
 <%= form_for @developer do |f| %>
+  <% if @developer.errors.any? %>
+    <ul>
+      <% @developer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= f.label :name %><br>
   <%= f.text_field :name %><br><br>
 
