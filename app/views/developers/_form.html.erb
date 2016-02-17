@@ -13,6 +13,9 @@
   <%= f.label :gender %><br>
   <%= f.select(:gender, M: 1, F: 2) %><br><br>
 
+  <%= f.label :indication_id %><br>
+  <%= f.collection_select(:indication_id, Developer.all, :id, :name, { prompt: 'None'}) %><br><br>
+
   <%= f.label :resume %><br>
   <%= f.text_area :resume %><br><br>
 
