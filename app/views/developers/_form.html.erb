@@ -1,5 +1,9 @@
 <%= form_for @developer do |f| %>
-  <%= f.text_field :name %><br>
-  <%= f.text_area :resume %><br>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :resume %><br>
+  <%= f.text_area :resume %><br><br>
+
   <%= f.submit %>
 <% end %>
