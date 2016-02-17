@@ -45,6 +45,6 @@ class DevelopersController < ApplicationController
   end
 
   def developer_params
-    params.require(:developer).permit(:name, :resume)
+    params.require(:developer).permit(:name, :resume, :gender)
   end
 end
