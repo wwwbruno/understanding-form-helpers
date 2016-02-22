@@ -10,6 +10,7 @@ class DevelopersController < ApplicationController
 
   def new
     @developer = Developer.new
+    @developer.addresses.build
   end
 
   def create
@@ -45,6 +46,7 @@ class DevelopersController < ApplicationController
   end
 
   def developer_params
-    params.require(:developer).permit(:name, :resume, :gender)
+    params.require(:developer).permit(:name, :resume, :gender,
+    addresses_attributes: [:id, :name, :street])
   end
 end

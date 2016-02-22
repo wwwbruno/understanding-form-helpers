@@ -19,5 +19,18 @@
   <%= f.label :resume %><br>
   <%= f.text_area :resume %><br><br>
 
+  Addresses:
+  <ul>
+    <%= f.fields_for :addresses do |addresses_form| %>
+      <li>
+        <%= addresses_form.label :name %><br>
+        <%= addresses_form.text_field :name %><br><br>
+
+        <%= addresses_form.label :street %><br>
+        <%= addresses_form.text_field :street %><br><br>
+      </li>
+    <% end %>
+  </ul>
+
   <%= f.submit %>
 <% end %>
